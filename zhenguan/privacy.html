@@ -67,7 +67,7 @@ footer a{color:#d9cdb8;text-decoration:none;display:inline-flex;align-items:cent
 
 <p>《推城三國：鎮關》（以下稱「本遊戲」）是一款手機塔防遊戲。本遊戲不需要註冊帳號，我們不會要求你提供姓名、電話、電子郵件等個人資料。自 1.5.0 版起，遊戲會自動建立一個匿名的線上帳號（見第二節）。本頁說明本遊戲與其使用的第三方服務會處理哪些資料。</p>
 
-<div class="note"><p>本遊戲目前處於測試階段。功能若有調整而影響資料處理方式，我們會在新版本推出前先更新本頁與生效日期。本頁最近的更新：第二節的線上帳號（自 1.5.0 版起）；第四節的遊玩統計與當機回報（自 1.4.0 版起）。</p></div>
+<div class="note"><p>本遊戲目前處於測試階段。功能若有調整而影響資料處理方式，我們會在新版本推出前先更新本頁與生效日期。本頁最近的更新：第五節的伺服器購買紀錄（自 1.6.0 版起）；第二節的線上帳號（自 1.5.0 版起）；第四節的遊玩統計與當機回報（自 1.4.0 版起）。</p></div>
 
 <h3>一、首次啟動時的詢問</h3>
 <ul>
@@ -116,7 +116,18 @@ footer a{color:#d9cdb8;text-decoration:none;display:inline-flex;align-items:cent
 <p>這些資料不包含你的姓名、電子郵件、電話或精確位置，我們也沒有把它們用於廣告：在分析服務中，與廣告相關的資料使用一律設為拒絕。Google 如何處理這些資料，請見 <a href="https://firebase.google.com/support/privacy" rel="noopener">Firebase 的隱私權與安全性說明</a>。</p>
 
 <h3>五、購買</h3>
-<p>遊戲內購買由 Apple App Store 或 Google Play 處理付款。我們看不到你的信用卡或付款資料；本遊戲只會從商店得知某個項目是否已購買，用來開通與恢復你購買的內容。</p>
+<p>遊戲內購買由 Apple App Store 或 Google Play 處理付款。我們看不到你的信用卡或付款資料。你的付款資料與商店上的訂單紀錄，由 Apple 或 Google 依各自的政策處理與保存，請參閱 <a href="https://www.apple.com/tw/legal/privacy/" rel="noopener">Apple 隱私權政策</a> 及 <a href="https://policies.google.com/privacy?hl=zh-TW" rel="noopener">Google 隱私權政策</a>。</p>
+<p><strong>伺服器上的購買紀錄</strong>：自 1.6.0 版起，你付款之後，遊戲會把商店為這筆購買開出的憑證（Google Play 的購買代幣，或 Apple 簽署的交易資料）送到我們的伺服器（設於台灣的 Google Cloud）。伺服器向 Google 查證、或以 Apple 的簽章確認這筆購買屬實之後，才把元寶加進你的線上帳號或開通你購買的項目。購買前，遊戲會在商店訂單上附加一個由線上帳號經單向雜湊產生的標記（無法反推回你的帳號，也不含姓名等個人資料），用來確認收據屬於同一個帳號。</p>
+<div class="tbl"><table>
+<thead><tr><th>伺服器保存的項目</th><th>用途</th></tr></thead>
+<tbody>
+<tr><td>線上帳號的匿名識別碼、商品代號、平台、商店的訂單編號（Google Play 訂單編號或 Apple 交易編號）、是否為測試購買、入帳時間</td><td>交付你購買的內容、客服查詢</td></tr>
+<tr><td>辨認同一筆購買的編號（Apple 交易編號；Android 為購買代幣經雜湊處理的值，代幣本身不保存）</td><td>防止同一筆購買重複入帳或被其他帳號使用</td></tr>
+<tr><td>退款或撤銷的狀態與時間</td><td>處理退款</td></tr>
+<tr><td>元寶的入帳與扣回（記在帳號的貨幣增減紀錄中）、已開通的項目</td><td>交付你購買的內容、客服查詢</td></tr>
+</tbody>
+</table></div>
+<p>Google 與 Apple 會在購買被退款或撤銷時通知我們的伺服器（Google 透過 Google Cloud Pub/Sub，Apple 透過 App Store 伺服器通知）。我們會扣回該筆購買給予的元寶（元寶若已用掉，餘額可能變為負數）或收回購買的項目；商店若之後撤回退款，會再還給你。購買紀錄是購買功能運作所需，不受「遊玩統計與當機回報」開關影響，也不用於廣告。保存期間請見第八節。</p>
 
 <h3>六、權限</h3>
 <ul>
@@ -130,7 +141,7 @@ footer a{color:#d9cdb8;text-decoration:none;display:inline-flex;align-items:cent
 <p>本遊戲不是專為兒童設計。對於表示未滿 13 歲的玩家，本遊戲只顯示非個人化廣告，不詢問 iOS 追蹤授權，也不收集遊玩統計與當機回報。如果你認為兒童透過本遊戲提供了個人資料給我們，請與我們聯絡，我們會協助處理。</p>
 
 <h3>八、資料的保存與刪除</h3>
-<p>我們不保存你的姓名或聯絡方式。線上帳號的資料會保存到你刪除帳號為止：你可以隨時在「設定 → 帳號與換機」刪除，或寫信請我們代為刪除（請附上帳號代碼）。遊玩統計最長保存 14 個月，當機回報保存 90 天，期滿由 Google 的服務自動刪除；若你希望提早刪除，請寫信給我們，我們可能需要請你提供協助辨識的資訊（例如遊玩的日期與時間）。保存在你裝置上的資料，解除安裝即刪除；同步到 Google Play 遊戲或 iCloud 的存檔，可以在該平台的設定中刪除；由 Google AdMob 處理的資料，請依上方連結向 Google 行使你的權利。若需要協助，請寫信給我們。</p>
+<p>我們不保存你的姓名或聯絡方式。線上帳號的資料會保存到你刪除帳號為止：你可以隨時在「設定 → 帳號與換機」刪除，或寫信請我們代為刪除（請附上帳號代碼）。購買紀錄是線上帳號資料的一部分：刪除線上帳號時，貨幣增減紀錄（包括購買與退款）與已開通的項目會一併刪除；但每筆購買的去重紀錄會保留，內容是平台、商品代號、訂單編號、是否為測試購買、入帳與退款的狀態和時間，以及已刪除帳號的匿名識別碼（刪除後，我們這邊已無法把它對應到任何帳號或登入身分）。保留它是為了防止同一筆購買在其他帳號再次入帳，並在商店之後通知退款時正確處理；這些紀錄目前沒有設定自動刪除的期限。商店上的訂單紀錄由 Apple 或 Google 保存，不會因為刪除線上帳號而刪除。遊玩統計最長保存 14 個月，當機回報保存 90 天，期滿由 Google 的服務自動刪除；若你希望提早刪除，請寫信給我們，我們可能需要請你提供協助辨識的資訊（例如遊玩的日期與時間）。保存在你裝置上的資料，解除安裝即刪除；同步到 Google Play 遊戲或 iCloud 的存檔，可以在該平台的設定中刪除；由 Google AdMob 處理的資料，請依上方連結向 Google 行使你的權利。若需要協助，請寫信給我們。</p>
 
 <h3>九、政策更新與聯絡我們</h3>
 <p>本政策內容若有變更，會更新本頁面並修改上方的生效日期。若有任何問題，請寫信到 <a href="mailto:support@tuichengsanguo.com" style="overflow-wrap:anywhere">support@tuichengsanguo.com</a>，並註明遊戲名稱「推城三國：鎮關」。</p>
@@ -144,7 +155,7 @@ footer a{color:#d9cdb8;text-decoration:none;display:inline-flex;align-items:cent
 
 <p style="margin-top:16px">Three Kingdoms: Hold the Pass ("the game") is a mobile tower-defense game. The game does not require you to register an account, and we do not ask for your name, phone number, email address or similar personal details. From version 1.5.0 the game automatically creates an anonymous online account (see section 2). This page explains what data the game and the third-party services it uses may process.</p>
 
-<div class="note"><p>The game is currently in testing. If a feature change affects how data is handled, we will update this page and its effective date before that version is released. Latest updates to this page: the online account in section 2 (from version 1.5.0); gameplay statistics and crash reports in section 4 (from version 1.4.0).</p></div>
+<div class="note"><p>The game is currently in testing. If a feature change affects how data is handled, we will update this page and its effective date before that version is released. Latest updates to this page: purchase records on our server in section 5 (from version 1.6.0); the online account in section 2 (from version 1.5.0); gameplay statistics and crash reports in section 4 (from version 1.4.0).</p></div>
 
 <h3>1. Questions at first launch</h3>
 <ul>
@@ -193,7 +204,18 @@ footer a{color:#d9cdb8;text-decoration:none;display:inline-flex;align-items:cent
 <p>This data does not include your name, email address, phone number or precise location, and we do not use it for advertising: every advertising-related use is set to denied in the analytics service. For how Google handles this data, see <a href="https://firebase.google.com/support/privacy" rel="noopener">Privacy and Security in Firebase</a>.</p>
 
 <h3>5. Purchases</h3>
-<p>In-app purchases are processed by the Apple App Store or Google Play. We never see your card or payment details. The game only learns from the store whether an item has been purchased, so that it can unlock and restore what you bought.</p>
+<p>In-app purchases are processed by the Apple App Store or Google Play. We never see your card or payment details. Your payment details and the order records held by the store are processed and kept by Apple or Google under their own policies; see the <a href="https://www.apple.com/legal/privacy/" rel="noopener">Apple Privacy Policy</a> and the <a href="https://policies.google.com/privacy" rel="noopener">Google Privacy Policy</a>.</p>
+<p><strong>Purchase records on our server.</strong> From version 1.6.0, after you pay, the game sends the proof of purchase issued by the store (a Google Play purchase token, or a transaction signed by Apple) to our server (on Google Cloud, located in Taiwan). The server checks the purchase with Google, or verifies Apple's signature, and only then adds the gems to your online account or unlocks the item you bought. Before a purchase, the game attaches a tag to the store order that is derived from your online account with a one-way hash. It cannot be turned back into your account and contains no personal details such as your name; it is used to confirm that a receipt belongs to the same account.</p>
+<div class="tbl"><table>
+<thead><tr><th>What our server stores</th><th>Purpose</th></tr></thead>
+<tbody>
+<tr><td>Your online account's anonymous identifier, the product ID, the platform, the store's order number (Google Play order ID or Apple transaction ID), whether it was a test purchase, and when it was credited</td><td>Delivering what you bought, customer support</td></tr>
+<tr><td>A number that identifies the purchase (the Apple transaction ID; on Android, a hashed value of the purchase token, not the token itself)</td><td>Stopping the same purchase from being credited twice or used by another account</td></tr>
+<tr><td>Refund or revocation status and time</td><td>Handling refunds</td></tr>
+<tr><td>Gems credited and taken back (in the account's currency history), and items unlocked</td><td>Delivering what you bought, customer support</td></tr>
+</tbody>
+</table></div>
+<p>Google and Apple notify our server when a purchase is refunded or revoked (Google through Google Cloud Pub/Sub, Apple through App Store Server Notifications). We then take back the gems that purchase gave (if they have been spent, your balance may become negative) or remove the item; if the store later reverses the refund, we give them back. Purchase records are needed for purchases to work, are not affected by the "gameplay statistics and crash reports" setting, and are not used for advertising. See section 8 for how long they are kept.</p>
 
 <h3>6. Permissions</h3>
 <ul>
@@ -207,7 +229,7 @@ footer a{color:#d9cdb8;text-decoration:none;display:inline-flex;align-items:cent
 <p>The game is not designed specifically for children. For players who indicate they are under 13, the game shows only non-personalized ads, does not ask for iOS tracking permission, and does not collect gameplay statistics or crash reports. If you believe a child has provided personal data to us through the game, please contact us and we will help.</p>
 
 <h3>8. Retention and deletion</h3>
-<p>We do not hold your name or contact details. Online account data is kept until you delete the account: you can delete it at any time under Settings → Account &amp; Device Transfer, or write to us and we will delete it for you (please include your account ID). Gameplay statistics are kept for up to 14 months and crash reports for 90 days, after which Google's services delete them automatically. If you would like them deleted sooner, write to us; we may need to ask for details that help identify the records (such as the dates and times you played). Data on your device is deleted when you uninstall the game. Saves synced to Google Play Games or iCloud can be deleted in that platform's settings. For data processed by Google AdMob, please use the links above to exercise your rights with Google. If you need help, write to us.</p>
+<p>We do not hold your name or contact details. Online account data is kept until you delete the account: you can delete it at any time under Settings → Account &amp; Device Transfer, or write to us and we will delete it for you (please include your account ID). Purchase records are part of your online account data. When you delete the online account, its currency history (including purchases and refunds) and unlocked items are deleted. A duplicate-check record of each purchase is kept: the platform, product ID, order number, whether it was a test purchase, the credit and refund status and times, and the anonymous identifier of the deleted account (which, after deletion, we can no longer link to any account or sign-in identity). We keep it to stop the same purchase from being credited again to another account and to handle refunds the store reports later. There is currently no automatic deletion period for these records. Order records held by Apple or Google are kept by the store and are not deleted when you delete your online account. Gameplay statistics are kept for up to 14 months and crash reports for 90 days, after which Google's services delete them automatically. If you would like them deleted sooner, write to us; we may need to ask for details that help identify the records (such as the dates and times you played). Data on your device is deleted when you uninstall the game. Saves synced to Google Play Games or iCloud can be deleted in that platform's settings. For data processed by Google AdMob, please use the links above to exercise your rights with Google. If you need help, write to us.</p>
 
 <h3>9. Changes and contact</h3>
 <p>If this policy changes, we will update this page and the effective date above. Questions can be sent to <a href="mailto:support@tuichengsanguo.com" style="overflow-wrap:anywhere">support@tuichengsanguo.com</a>. Please mention the game title "Three Kingdoms: Hold the Pass".</p>
